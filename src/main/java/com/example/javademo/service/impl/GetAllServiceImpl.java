@@ -8,6 +8,7 @@ public class GetAllServiceImpl implements GetAll {
 
             System.out.println("java test");
 
+            System.out.println("java test");
 
     }
 }
