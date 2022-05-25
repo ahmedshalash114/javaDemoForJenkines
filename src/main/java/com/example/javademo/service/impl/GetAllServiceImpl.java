@@ -11,5 +11,7 @@ public class GetAllServiceImpl implements GetAll {
             System.out.println("java  test for muhaaned");
 
             System.out.println(" for only test i am playing ");
+
+        System.out.println("java test");
     }
 }
