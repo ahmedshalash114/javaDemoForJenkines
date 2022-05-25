@@ -3,7 +3,14 @@ pipeline {
  agent any
 
   stages {
-    stage('Scan') {
+
+   stage('Build') {
+        steps {
+            sh './mvnw compile'
+        }
+      }
+
+    stage('Code Snippet') {
       steps {
         withSonarQubeEnv(installationName: 'sq1') {
           sh './mvnw clean install sonar:sonar'
