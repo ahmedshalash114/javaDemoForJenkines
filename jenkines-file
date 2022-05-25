@@ -17,5 +17,21 @@ pipeline {
         }
       }
     }
+
+     stage('Unit Tests') {
+          steps {
+              sh './mvnw test'
+          }
+        }
+
   }
+   post {
+          failure {
+              mail to: 'ashalash38@gmail.com', subject: 'Build failed', body: 'Please fix!'
+          }
+
+          success {
+                        mail to: 'ashalash38@gmail.com', subject: 'Build Done', body: 'Regards!'
+                    }
+      }
 }
